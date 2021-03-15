@@ -7,125 +7,11 @@
     background-repeat: no-repeat;
 }
 
-%icon__ {
+.icon__ {
     width: 1.875rem;
     height: 1.875rem;
     display: inline-block;
     background-repeat: no-repeat;
-}
-
-// MAP
-.map__direction, .map__direction2, .map__position, .map__marker, .map__marker2, .map__location__arrow, .map__compass,
-
-// COOKING
-.cooking__kitchen__scale, .cooking__fork__spoon, .cooking__book, .cooking__pot, .cooking__grater, .cooking__frying__pan, .cooking__dish, .cooking__knife,
-.cooking__knife__and__fork2, .cooking__shovel, .cooking__ladle, .cooking__fork__spoon__knife, .cooking__fork, .cooking__knife2, .cooking__bowl, .cooking__knife__and__fork,
-.cooking__rolling__pin, .cooking__dishes, .cooking__spoon, .cooking__sieve, .cooking__chef, .cooking__cutting__board, .cooking__dinner, .cooking__saucepan, .cooking__baking__glove,
-
-//  DESIGN
-.design__horizontal, .design__interselect, .design__image, .design__brush, .design__line, .design__anchor__center, .design__target, .design__color,
-.design__anchor__left__up, .design__anchor__right, .design__zoom__minus, .design__flip__horizontal, .design__cap3, .design__anchor__left, .design__eraser,
-.design__component, .design__cap, .design__picker, .design__substract, .design__difference, .design__flatten, .design__stamp, .design__crop, .design__bezier__curve,
-.design__anchor__right__up, .design__polygon, .design__color__profile, .design__retangle, .design__join, .design__zoom__plus, .design__border, .design__pen__and__ruller,
-.design__anchor__left__down, .design__anchor__center__down, .design__pixels, .design__union, .design__position, .design__sketch, .design__anchor__right__down, .design__layers,
-.design__saturation, .design__edit2, .design__select, .design__join3, .design__anchor__center__up, .design__bucket, .design__triangle, .design__vertical, .design__cap2,
-.design__pencil, .design__magic, .design__join2, .design__pen__tool__vector, .design__adjust, .design__arrows, .design__flip__vertical, .design__patch, .design__mask, .design__circle,
-
-//  WEATHER
-.weather__cloud, .weather__sun__fog, .weather__rain2, .weather__temperature__empty, .weather__night__fog, .weather__cloudy, .weather__celcium, .weather__snow, .weather__sun, .weather__moon,
-.weather__thunder__nigth, .weather__fog, .weather__rain5, .weather__temperature__half, .weather__fahrenheit, .weather__suset, .weather__night__rain, .weather__cloud2, .weather__temperature__full,
-.weather__cloudy__night, .weather__sunset2, .weather__thunder, .weather__cloud__sun, .weather__snow, .weather__rainbow, .weather__cloud__wind, .weather__rain, .weather__cloud__fog, .weather__umbrella,
-.weather__day__rain, .weather__snow3, .weather__storm, .weather__wind, .weather__snow2,
-
-//  MEDIA
-.media__rec, .media__repeat__one, .media__repeat, .media__shuffle, .media__volume__full, .media__volume__up, .media__eject, .media__dvd, .media__library3,
-.media__library2, .media__play, .media__cd, .media__youtube, .media__music, .media__pause, .media__airpplay, .media__back, .media__equalizer, .media__volume__half,
-.media__vynil, .media__movie__lane, .media__movie__lane2, .media__music__note, .media__mute, .media__next, .media__forward, .media__playlist2, .media__airplay__video,
-.media__add__music, .media__music__cloud, .media__playlist, .media__library, .media__backward, .media__volume__down,
-
-// HOME
-.home__flower2, .home__bed, .home__toilet, .home__wood__horse, .home__wood, .home__trash, .home__door__open, .home__library, .home__key, .home__fireplace, .home__towel,
-.home__commode2, .home__air__ballon, .home__chair, .home__bulb, .home__timer, .home__alarm__clock, .home__armchair, .home__, .home__picture, .home__ladder, .home__box,
-.home__bath, .home__globe, .home__clock, .home__lamp, .home__mailbox, .home__bag__chair, .home__flashlight, .home__flower, .home__building, .home__flower3, .home__wood2,
-.home__curtains, .home__weight2, .home__couch, .home__lamp2, .home__bulb2, .home__book__open, .home__commode, .home__chair2, .home__heart, .home__earth,
-.home__water__mixer, .home__weight, .home__cupboard, .home__ruller, .home__stairs, .home__deer, .home__broom, .home__mirror,
-
-// NAVIGATION
-.navigation__up__down, .navigation__arrow__from__right, .navigation__down__left, .navigation__down__right, .navigation__route, .navigation__left, .navigation__arrow__from__top, .navigation__check, .navigation__angle__double__left,
-.navigation__down2, .navigation__arrow__left, .navigation__left2, .navigation__angle__double__up, .navigation__plus, .navigation__right2, .navigation__angle__double__down, .navigation__arrow__to__left, .navigation__waiting,
-.navigation__arrow__right, .navigation__up__right, .navigation__right3, .navigation__arrow__from__left, .navigation__arrow__down, .navigation__arrow__to__up, .navigation__from__bottom, .navigation__double__check,
-.navigation__angle__left, .navigation__arrows__h, .navigation__arrows__v, .navigation__angle__double__right, .navigation__arrow_up, .navigation__angle__right, .navigation__angle__to__right, .navigation__angle__down,
-.navigation__angle__up, .navigation__exchange, .navigation__arrow__to__bottom, .navigation__sing__in, .navigation__up__left, .navigation__close, .navigation__sing__out, .navigation__up2, .navigation__minus,
-
-// LAYOUT
-.layout__right__panel2, .layout__top__panel6, .layout__arrange, .layout__top__panel4, .layout__horizontal, .layout__top__panel,
-.layout__right__panel, .layout__3d, .layout__top__panel3, .layout__grid, .layout__blocks4, .layout__polygon,
-.layout__vertical, .layout__top__panel2, .layout__left__panel, .layout__top__panel5, .layout__left__panel2,
-
-// ELECTRIC
-.electric__gas__stove, .electric__outlet, .electric__blender, .electric__iron, .electric__washer, .electric__socket__us, .electric__range__hood, .electric__fan, .electric__air__dryer,
-.electric__air__conditioning, .electric__kettle, .electric__fridge, .electric__highvoltage, .electric__socket__eu, .electric__mixer, .electric__shutdown,
-
-// FOOD
-.food__cheese, .food__chicken, .food__pizza, .food__glass__martini, .food__bottle2, .food__two__bottles, .food__carrot, .food__beer, .food__orange,
-.food__french__bread, .food__cake, .food__coffe, .food__ice__cream2, .food__sushi, .food__burguer, .food__bottle, .food__coffe2, .food__ice__cream,
-.food__bucket, .food__bread, .food__miso__soup, .food__wine, .food__dinner, .food__cookie, .food__fish,
-
-// COMMUNICATION
-.communication__chat__smile, .communication__contact, .communication__readed__mail, .communication__group__chat, .communication__call, .communication__incoming__mail, .communication__chat__locked,
-.communication__reply, .communication__active__call, .communication__chat, .communication__adress__book, .communication__outgoing__mail, .communication__flag, .communication__group, .communication__adress__book2,
-.communication__mail, .communication__mail__error, .communication__clipboard__list, .communication__mailbox, .communication__urgent__mail, .communication__mail__opened, .communication__snoozed__mail,
-.communication__send, .communication__spam, .communication__mail__heart, .communication__add__user, .communication__address__card, .communication__chat__check, .communication__outgoing__box,
-.communication__outgoing__call, .communication__mail__notification, .communication__missed__call, .communication__dial__numbers, .communication__share, .communication__sending__mail, .communication__hield__user,
-.communication__chat5, .communication__right, .communication__archive, .communication__mail__attachment, .communication__chat4, .communication__incoming__call, .communication__delete__user, .communication__rss,
-.communication__safe__chat, .communication__sending, .communication__incoming__box, .communication__write, .communication__thumbtack, .communication__forward, .communication__chat6, .communication__mail__locked,
-.communication__clipboard__check, .communication__shield__thunder, .communication__mail__unocked, .communication__call1, .communication__chat2, .communication__reply__all, .communication__mail__at, .communication__chat__error,
-
-// FILES
-.file__media__folder, .file__user__folder, .file__deleted__folder, .file__folder__star, .file__cloud__download, .file__downloads__folder, .file__locked__folder,
-.file__folder__thunder, .file__protected__file, .file__folder__check, .file__downloaded__file, .file__folder__heart, .file__media, .file__music, .file__folder__cloud,
-.file__folder, .file__folder__plus, .file__done, .file__, .file__folder__minus, .file__pictures, .file__share, .file__uploaded__file, .file__compiled__file,
-.file__compilation, .file__folder__solid, .file__upload, .file__upload__folder, .file__cloud, .file__import, .file__download, .file__deleted__file,
-.file__cloud__upload, .file__export, .file__minus, .file__selected__file, .file__pictures2, .file__plus, .file__group__folders, .file__folder__error,
-
-// GENERAL
-.general__star, .general__like, .general__settings2, .general__trash, .general__other2, .general__smile, .general__size, .general__sad, .general__search, .general__hidden, .general__lock, .general__thunder__move,
-.general__unlock, .general__cursor, .general__notification2, .general__shield__disabled, .general__notifications, .general__other, .general__heart, .general__scale, .general__save, .general__attachment,
-.general__folder, .general__clipboard, .general__settings3, .general__dislike, .general__visible, .general__update, .general__shield__check, .general__bookmark, .general__attachment2, .general__edit, .general__thunder,
-.general__duplicate, .general__shield__protected, .general__half__heart, .general__expand__arrows, .general__half__star, .general__settings, .general__fire, .general__clip, .general__scissors, .general__user, .general__binocular,
-
-// TOOLS
-.tool__, .tool__brush, .tool__pantone, .tool__hummer, .tool__hummer2, .tool__axe, .tool__angle__grinder, .tool__screwdriver, .tool__roller, .tool__shovel,
-.tool__roulette, .tool__spatula, .tool__road__cone, .tool__swiss__knife, .tool__compass,
-
-// CODE
-.code__git2, .code__loading, .code__github, .code__option, .code__puzzle, .code__plus, .code__info__circle, .code__compiling, .code__warning, .code__time__schedule,
-.code__lock__circle, .code__done__circle, .code__settings, .code__warning__circle, .code__backspace, .code__control, .code__spy, .code__left__circle,
-.code__question__circle, .code__error__circle, .code__thunder__circle, .code__right__circle, .code__commit, .code__git4, .code__terminal, .code__git3, .code__lock__overturning,
-.code__git, .code__stop, .code__cmd, .code__shift, .code__, .code__minus,
-
-// DEVICES
-.device__tablet, .device__cpu2, .device__airpods, .device__bluetooth, .device__cassete, .device__laptop__macbook, .device__gamepad, .device__battery__empty, .device__cardboard__vr, .device__generator,
-.device__apple__watch, .device__usb, .device__router2, .device__diagnostics, .device__radio, .device__display3, .device__laptop, .device__Keyboard, .device__iphone__back, .device__display2,
-.device__iphone__X, .device__tv2, .device__lte2, .device__sd__card, .device__android, .device__watch, .device__printer, .device__video__camera, .device__mic, .device__wi__fi, .device__imac, .device__iphone__x__back,
-.device__phone, .device__homepod, .device__gameboy, .device__lte, .device__server, .device__hard__drive, .device__battery__full, .device__tv, .device__battery__charging, .device__gamepad2, .device__display,
-.device__usb__storage, .device__router, .device__watch2, .device__headphones, .device__mouse, .device__battery__half, .device__speaker, .device__midi, .device__cpu, .device__camera,
-
-// SHOPPING
-.shopping__bitcoin, .shopping__pound, .shopping__price2, .shopping__sale2, .shopping__sale, .shopping__mc, .shopping__barcode__read, .shopping__chart__line, .shopping__sort3, .shopping__cart2, .shopping__barcode__scan,
-.shopping__bag, .shopping__chart__pie, .shopping__chart__line2, .shopping__sort, .shopping__chart__bar, .shopping__chart__bar2, .shopping__cart3, .shopping__bag2, .shopping__chart__bar3, .shopping__box2, .shopping__price,
-.shopping__loader, .shopping__rouble, .shopping__box, .shopping__credit__card, .shopping__ticket, .shopping__wallet, .shopping__settings, .shopping__dollar, .shopping__cart, .shopping__gift, .shopping__safe, .shopping__atm,
-.shopping__money, .shopping__wallet2, .shopping__wallet3, .shopping__barcode, .shopping__sort2, .shopping__euro, .shopping__calculator, .shopping__box3,
-
-// TEXT
-.text__width, .text__align__justify, .text__bold, .text__align__left, .text__quote2, .text__edit__text, .text__bullet__list, .text__strikethrough, .text__, .text__redo,
-.text__quote, .text__underline, .text__article, .text__toggle__right, .text__toggle__left, .text__paragraph, .text__undo, .text__h2, .text__font, .text__toggle,
-.text__filter, .text__align__auto, .text__align__center, .text__itallic, .text__height, .text__dots, .text__menu, .text__h1, .text__code, .text__align__right,
-
-// CLOTHES
-.clothes__socks, .clothes__tie, .clothes__hanger, .clothes__t__shirt, .clothes__sun__glasses, .clothes__crown, .clothes__panties, .clothes__briefcase, .clothes__hat, .clothes__shorts, .clothes__shoes,
-.clothes__brassiere, .clothes__shirt, .clothes__sneakers, .clothes__cap, .clothes__dress {
-    @extend %icon__;
 }
 
 // MAP
@@ -2742,3 +2628,117 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 .clothes__dress {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cpolygon points='0 0 24 0 24 24 0 24'%3E%3C/polygon%3E%3Cpath d='M8.04050792,3 C8.31778201,4.50768629 9.98487319,5.66666667 12,5.66666667 C14.0151268,5.66666667 15.682218,4.50768629 15.9594921,3 L18.381966,3 C18.9342508,3 19.381966,3.44771525 19.381966,4 C19.381966,4.1552451 19.3458209,4.30835816 19.2763932,4.4472136 L16.2763932,10.4472136 C16.1070012,10.7859976 15.7607381,11 15.381966,11 L8.61803399,11 C8.23926193,11 7.89299881,10.7859976 7.7236068,10.4472136 L4.7236068,4.4472136 C4.47661755,3.9532351 4.6768419,3.35256206 5.17082039,3.10557281 C5.30967583,3.03614509 5.46278889,3 5.61803399,3 L8.04050792,3 Z' fill='%23000000' opacity='0.3'%3E%3C/path%3E%3Cpath d='M9.35406592,12 L14.6459341,12 C15.4637433,12 16.1991608,12.4979019 16.5028875,13.2572186 L19.4514437,20.6286093 C19.6565571,21.1413928 19.4071412,21.7233633 18.8943577,21.9284767 C18.7762374,21.9757248 18.6501865,22 18.522967,22 L5.47703296,22 C4.92474821,22 4.47703296,21.5522847 4.47703296,21 C4.47703296,20.8727806 4.50130816,20.7467296 4.54855627,20.6286093 L7.49711254,13.2572186 C7.80083924,12.4979019 8.53625675,12 9.35406592,12 Z' fill='%23000000'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
 }
+
+// // MAP
+// .map__direction, .map__direction2, .map__position, .map__marker, .map__marker2, .map__location__arrow, .map__compass,
+
+// // COOKING
+// .cooking__kitchen__scale, .cooking__fork__spoon, .cooking__book, .cooking__pot, .cooking__grater, .cooking__frying__pan, .cooking__dish, .cooking__knife,
+// .cooking__knife__and__fork2, .cooking__shovel, .cooking__ladle, .cooking__fork__spoon__knife, .cooking__fork, .cooking__knife2, .cooking__bowl, .cooking__knife__and__fork,
+// .cooking__rolling__pin, .cooking__dishes, .cooking__spoon, .cooking__sieve, .cooking__chef, .cooking__cutting__board, .cooking__dinner, .cooking__saucepan, .cooking__baking__glove,
+
+// //  DESIGN
+// .design__horizontal, .design__interselect, .design__image, .design__brush, .design__line, .design__anchor__center, .design__target, .design__color,
+// .design__anchor__left__up, .design__anchor__right, .design__zoom__minus, .design__flip__horizontal, .design__cap3, .design__anchor__left, .design__eraser,
+// .design__component, .design__cap, .design__picker, .design__substract, .design__difference, .design__flatten, .design__stamp, .design__crop, .design__bezier__curve,
+// .design__anchor__right__up, .design__polygon, .design__color__profile, .design__retangle, .design__join, .design__zoom__plus, .design__border, .design__pen__and__ruller,
+// .design__anchor__left__down, .design__anchor__center__down, .design__pixels, .design__union, .design__position, .design__sketch, .design__anchor__right__down, .design__layers,
+// .design__saturation, .design__edit2, .design__select, .design__join3, .design__anchor__center__up, .design__bucket, .design__triangle, .design__vertical, .design__cap2,
+// .design__pencil, .design__magic, .design__join2, .design__pen__tool__vector, .design__adjust, .design__arrows, .design__flip__vertical, .design__patch, .design__mask, .design__circle,
+
+// //  WEATHER
+// .weather__cloud, .weather__sun__fog, .weather__rain2, .weather__temperature__empty, .weather__night__fog, .weather__cloudy, .weather__celcium, .weather__snow, .weather__sun, .weather__moon,
+// .weather__thunder__nigth, .weather__fog, .weather__rain5, .weather__temperature__half, .weather__fahrenheit, .weather__suset, .weather__night__rain, .weather__cloud2, .weather__temperature__full,
+// .weather__cloudy__night, .weather__sunset2, .weather__thunder, .weather__cloud__sun, .weather__snow, .weather__rainbow, .weather__cloud__wind, .weather__rain, .weather__cloud__fog, .weather__umbrella,
+// .weather__day__rain, .weather__snow3, .weather__storm, .weather__wind, .weather__snow2,
+
+// //  MEDIA
+// .media__rec, .media__repeat__one, .media__repeat, .media__shuffle, .media__volume__full, .media__volume__up, .media__eject, .media__dvd, .media__library3,
+// .media__library2, .media__play, .media__cd, .media__youtube, .media__music, .media__pause, .media__airpplay, .media__back, .media__equalizer, .media__volume__half,
+// .media__vynil, .media__movie__lane, .media__movie__lane2, .media__music__note, .media__mute, .media__next, .media__forward, .media__playlist2, .media__airplay__video,
+// .media__add__music, .media__music__cloud, .media__playlist, .media__library, .media__backward, .media__volume__down,
+
+// // HOME
+// .home__flower2, .home__bed, .home__toilet, .home__wood__horse, .home__wood, .home__trash, .home__door__open, .home__library, .home__key, .home__fireplace, .home__towel,
+// .home__commode2, .home__air__ballon, .home__chair, .home__bulb, .home__timer, .home__alarm__clock, .home__armchair, .home__, .home__picture, .home__ladder, .home__box,
+// .home__bath, .home__globe, .home__clock, .home__lamp, .home__mailbox, .home__bag__chair, .home__flashlight, .home__flower, .home__building, .home__flower3, .home__wood2,
+// .home__curtains, .home__weight2, .home__couch, .home__lamp2, .home__bulb2, .home__book__open, .home__commode, .home__chair2, .home__heart, .home__earth,
+// .home__water__mixer, .home__weight, .home__cupboard, .home__ruller, .home__stairs, .home__deer, .home__broom, .home__mirror,
+
+// // NAVIGATION
+// .navigation__up__down, .navigation__arrow__from__right, .navigation__down__left, .navigation__down__right, .navigation__route, .navigation__left, .navigation__arrow__from__top, .navigation__check, .navigation__angle__double__left,
+// .navigation__down2, .navigation__arrow__left, .navigation__left2, .navigation__angle__double__up, .navigation__plus, .navigation__right2, .navigation__angle__double__down, .navigation__arrow__to__left, .navigation__waiting,
+// .navigation__arrow__right, .navigation__up__right, .navigation__right3, .navigation__arrow__from__left, .navigation__arrow__down, .navigation__arrow__to__up, .navigation__from__bottom, .navigation__double__check,
+// .navigation__angle__left, .navigation__arrows__h, .navigation__arrows__v, .navigation__angle__double__right, .navigation__arrow_up, .navigation__angle__right, .navigation__angle__to__right, .navigation__angle__down,
+// .navigation__angle__up, .navigation__exchange, .navigation__arrow__to__bottom, .navigation__sing__in, .navigation__up__left, .navigation__close, .navigation__sing__out, .navigation__up2, .navigation__minus,
+
+// // LAYOUT
+// .layout__right__panel2, .layout__top__panel6, .layout__arrange, .layout__top__panel4, .layout__horizontal, .layout__top__panel,
+// .layout__right__panel, .layout__3d, .layout__top__panel3, .layout__grid, .layout__blocks4, .layout__polygon,
+// .layout__vertical, .layout__top__panel2, .layout__left__panel, .layout__top__panel5, .layout__left__panel2,
+
+// // ELECTRIC
+// .electric__gas__stove, .electric__outlet, .electric__blender, .electric__iron, .electric__washer, .electric__socket__us, .electric__range__hood, .electric__fan, .electric__air__dryer,
+// .electric__air__conditioning, .electric__kettle, .electric__fridge, .electric__highvoltage, .electric__socket__eu, .electric__mixer, .electric__shutdown,
+
+// // FOOD
+// .food__cheese, .food__chicken, .food__pizza, .food__glass__martini, .food__bottle2, .food__two__bottles, .food__carrot, .food__beer, .food__orange,
+// .food__french__bread, .food__cake, .food__coffe, .food__ice__cream2, .food__sushi, .food__burguer, .food__bottle, .food__coffe2, .food__ice__cream,
+// .food__bucket, .food__bread, .food__miso__soup, .food__wine, .food__dinner, .food__cookie, .food__fish,
+
+// // COMMUNICATION
+// .communication__chat__smile, .communication__contact, .communication__readed__mail, .communication__group__chat, .communication__call, .communication__incoming__mail, .communication__chat__locked,
+// .communication__reply, .communication__active__call, .communication__chat, .communication__adress__book, .communication__outgoing__mail, .communication__flag, .communication__group, .communication__adress__book2,
+// .communication__mail, .communication__mail__error, .communication__clipboard__list, .communication__mailbox, .communication__urgent__mail, .communication__mail__opened, .communication__snoozed__mail,
+// .communication__send, .communication__spam, .communication__mail__heart, .communication__add__user, .communication__address__card, .communication__chat__check, .communication__outgoing__box,
+// .communication__outgoing__call, .communication__mail__notification, .communication__missed__call, .communication__dial__numbers, .communication__share, .communication__sending__mail, .communication__hield__user,
+// .communication__chat5, .communication__right, .communication__archive, .communication__mail__attachment, .communication__chat4, .communication__incoming__call, .communication__delete__user, .communication__rss,
+// .communication__safe__chat, .communication__sending, .communication__incoming__box, .communication__write, .communication__thumbtack, .communication__forward, .communication__chat6, .communication__mail__locked,
+// .communication__clipboard__check, .communication__shield__thunder, .communication__mail__unocked, .communication__call1, .communication__chat2, .communication__reply__all, .communication__mail__at, .communication__chat__error,
+
+// // FILES
+// .file__media__folder, .file__user__folder, .file__deleted__folder, .file__folder__star, .file__cloud__download, .file__downloads__folder, .file__locked__folder,
+// .file__folder__thunder, .file__protected__file, .file__folder__check, .file__downloaded__file, .file__folder__heart, .file__media, .file__music, .file__folder__cloud,
+// .file__folder, .file__folder__plus, .file__done, .file__, .file__folder__minus, .file__pictures, .file__share, .file__uploaded__file, .file__compiled__file,
+// .file__compilation, .file__folder__solid, .file__upload, .file__upload__folder, .file__cloud, .file__import, .file__download, .file__deleted__file,
+// .file__cloud__upload, .file__export, .file__minus, .file__selected__file, .file__pictures2, .file__plus, .file__group__folders, .file__folder__error,
+
+// // GENERAL
+// .general__star, .general__like, .general__settings2, .general__trash, .general__other2, .general__smile, .general__size, .general__sad, .general__search, .general__hidden, .general__lock, .general__thunder__move,
+// .general__unlock, .general__cursor, .general__notification2, .general__shield__disabled, .general__notifications, .general__other, .general__heart, .general__scale, .general__save, .general__attachment,
+// .general__folder, .general__clipboard, .general__settings3, .general__dislike, .general__visible, .general__update, .general__shield__check, .general__bookmark, .general__attachment2, .general__edit, .general__thunder,
+// .general__duplicate, .general__shield__protected, .general__half__heart, .general__expand__arrows, .general__half__star, .general__settings, .general__fire, .general__clip, .general__scissors, .general__user, .general__binocular,
+
+// // TOOLS
+// .tool__, .tool__brush, .tool__pantone, .tool__hummer, .tool__hummer2, .tool__axe, .tool__angle__grinder, .tool__screwdriver, .tool__roller, .tool__shovel,
+// .tool__roulette, .tool__spatula, .tool__road__cone, .tool__swiss__knife, .tool__compass,
+
+// // CODE
+// .code__git2, .code__loading, .code__github, .code__option, .code__puzzle, .code__plus, .code__info__circle, .code__compiling, .code__warning, .code__time__schedule,
+// .code__lock__circle, .code__done__circle, .code__settings, .code__warning__circle, .code__backspace, .code__control, .code__spy, .code__left__circle,
+// .code__question__circle, .code__error__circle, .code__thunder__circle, .code__right__circle, .code__commit, .code__git4, .code__terminal, .code__git3, .code__lock__overturning,
+// .code__git, .code__stop, .code__cmd, .code__shift, .code__, .code__minus,
+
+// // DEVICES
+// .device__tablet, .device__cpu2, .device__airpods, .device__bluetooth, .device__cassete, .device__laptop__macbook, .device__gamepad, .device__battery__empty, .device__cardboard__vr, .device__generator,
+// .device__apple__watch, .device__usb, .device__router2, .device__diagnostics, .device__radio, .device__display3, .device__laptop, .device__Keyboard, .device__iphone__back, .device__display2,
+// .device__iphone__X, .device__tv2, .device__lte2, .device__sd__card, .device__android, .device__watch, .device__printer, .device__video__camera, .device__mic, .device__wi__fi, .device__imac, .device__iphone__x__back,
+// .device__phone, .device__homepod, .device__gameboy, .device__lte, .device__server, .device__hard__drive, .device__battery__full, .device__tv, .device__battery__charging, .device__gamepad2, .device__display,
+// .device__usb__storage, .device__router, .device__watch2, .device__headphones, .device__mouse, .device__battery__half, .device__speaker, .device__midi, .device__cpu, .device__camera,
+
+// // SHOPPING
+// .shopping__bitcoin, .shopping__pound, .shopping__price2, .shopping__sale2, .shopping__sale, .shopping__mc, .shopping__barcode__read, .shopping__chart__line, .shopping__sort3, .shopping__cart2, .shopping__barcode__scan,
+// .shopping__bag, .shopping__chart__pie, .shopping__chart__line2, .shopping__sort, .shopping__chart__bar, .shopping__chart__bar2, .shopping__cart3, .shopping__bag2, .shopping__chart__bar3, .shopping__box2, .shopping__price,
+// .shopping__loader, .shopping__rouble, .shopping__box, .shopping__credit__card, .shopping__ticket, .shopping__wallet, .shopping__settings, .shopping__dollar, .shopping__cart, .shopping__gift, .shopping__safe, .shopping__atm,
+// .shopping__money, .shopping__wallet2, .shopping__wallet3, .shopping__barcode, .shopping__sort2, .shopping__euro, .shopping__calculator, .shopping__box3,
+
+// // TEXT
+// .text__width, .text__align__justify, .text__bold, .text__align__left, .text__quote2, .text__edit__text, .text__bullet__list, .text__strikethrough, .text__, .text__redo,
+// .text__quote, .text__underline, .text__article, .text__toggle__right, .text__toggle__left, .text__paragraph, .text__undo, .text__h2, .text__font, .text__toggle,
+// .text__filter, .text__align__auto, .text__align__center, .text__itallic, .text__height, .text__dots, .text__menu, .text__h1, .text__code, .text__align__right,
+
+// // CLOTHES
+// .clothes__socks, .clothes__tie, .clothes__hanger, .clothes__t__shirt, .clothes__sun__glasses, .clothes__crown, .clothes__panties, .clothes__briefcase, .clothes__hat, .clothes__shorts, .clothes__shoes,
+// .clothes__brassiere, .clothes__shirt, .clothes__sneakers, .clothes__cap, .clothes__dress {
+//     @extend %icon__;
+// }
