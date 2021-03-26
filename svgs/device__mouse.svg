@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="mouse__icon" role="img" aria-label="mouse__icon">
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <rect x="0" y="0" width="24" height="24"></rect>
-        <rect fill="#000000" opacity="0.3" x="6" y="5" width="12" height="18" rx="6"></rect>
-        <path d="M11.5,2 L12.5,2 C12.7761424,2 13,2.22385763 13,2.5 L13,5 L11,5 L11,2.5 C11,2.22385763 11.2238576,2 11.5,2 Z" fill="#000000"></path>
-        <rect fill="#000000" x="11" y="16" width="2" height="5" rx="1"></rect>
+        <rect fill="#201F24" opacity="0.3" x="6" y="5" width="12" height="18" rx="6"></rect>
+        <path d="M11.5,2 L12.5,2 C12.7761424,2 13,2.22385763 13,2.5 L13,5 L11,5 L11,2.5 C11,2.22385763 11.2238576,2 11.5,2 Z" fill="#201F24"></path>
+        <rect fill="#201F24" x="11" y="16" width="2" height="5" rx="1"></rect>
     </g>
 </svg>

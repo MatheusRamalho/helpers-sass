@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="anchor__center__icon" role="img" aria-label="anchor__center__icon">
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <rect x="0" y="0" width="24" height="24"></rect>
-        <rect fill="#000000" x="8" y="7" width="8" height="2"></rect>
-        <circle fill="#000000" opacity="0.3" cx="12" cy="13" r="3"></circle>
+        <rect fill="#201F24" x="8" y="7" width="8" height="2"></rect>
+        <circle fill="#201F24" opacity="0.3" cx="12" cy="13" r="3"></circle>
     </g>
 </svg>
