@@ -1,0 +1,662 @@
+// FLEXBOX
+
+// Display felx.
+// Torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens.
+
+@mixin display__flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+// Flex direction.
+// Define a direção dos flex itens.
+// Por padrão ele é row (linha), por isso quando o display: flex; é adicionado, os elementos ficam em linha, um do lado do outro.
+
+@mixin flex__direction($property: row) {
+    // Error console ide.
+    @if ($property != row and $property != row-reverse and $property != column and $property != column-reverse) {
+        @error "A propriedade #{$property} é diferente dos valores aceitos (row / row-reverse / column / column-reverse).";
+    }
+
+        // Os itens ficam em linha.
+    @if ($property == row) {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+
+        // Os itens ficam em linha reversa, ou seja 3, 2, 1.
+    } @else if ($property == row-reverse) {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+
+        // Os itens ficam em uma única coluna, um embaixo do outro.
+    } @else if ($property == column) {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+
+        // Os itens ficam em uma única coluna, um embaixo do outro, porém em ordem reversa: 3, 2 e 1.
+    } @else if ($property == column-reverse) {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    }
+}
+
+// Flex wrap;
+// Define se os itens devem quebrar ou não a linha. Por padrão eles não quebram linha.
+
+@mixin flex__wrap($property: nowrap) {
+    // Error console ide.
+    @if ($property != nowrap and $property != wrap and $property != wrap-reverse) {
+        @error "A propriedade #{$property} é diferente dos valores aceitos (nowrap / wrap / wrap-reverse).";
+    }
+
+        // Valor padrão, não permite a quebra de linha.
+    @if ($property == nowrap) {
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+
+        // Quebra a linha assim que um dos flex itens não puder mais ser compactado.
+    } @else if ($property == wrap) {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        // Quebra a linha assim que um dos flex itens não puder mais ser compactado. A quebra é na direção contrária, ou seja para a linha acima.
+    } @else if ($property == wrap-reverse) {
+        -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+    }
+}
+
+// Flex flow.
+// O flex-flow é um atalho para as propriedades flex-direction e flex-wrap.
+
+@mixin flex__flow($property) {
+    // Error console ide.
+    @if ($property != row nowrap and $property != row wrap and $property != column nowrap) {
+        @error "A propriedade #{$property} é diferente dos valores aceitos (row nowrap / row wrap / column nowrap).";
+    }
+
+        // Coloca o conteúdo em linha e não permite a quebra de linha.
+    @if ($property == row nowrap) {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+
+        // Coloca o conteúdo em linha e permite a quebra de linha.
+    } @else if ($property == row wrap) {
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+
+        // Coloca o conteúdo em coluna e não permite a quebra de linha.
+    } @else if ($property == column nowrap) {
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+    }
+}
+
+// Justify content.
+// Alinha os itens flex no container de acordo com a direção.
+// A propriedade só funciona se os itens atuais não ocuparem todo o container.
+// Isso significa que ao definir flex: 1; ou algo similar nos itens, a propriedade não terá mais função.
+
+@mixin justify__content($property) {
+    // Error console ide.
+    @if ($property != start and $property != end and $property != center and $property != between and $property != around) {
+        @error "A propriedade #{$property} é diferente dos valores aceitos (start / end / center / between / around).";
+    }
+
+        // Alinha os itens ao início do container.
+    @if ($property == start) {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+
+        // Alinha os itens ao final do container.
+    } @else if ($property == end) {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+
+        // Alinha os itens ao centro do container.
+    } @else if ($property == center) {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+
+        // Cria um espaçamento igual entre os elementos. Mantendo o primeiro grudado no início e o último no final.
+    } @else if ($property == between) {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+
+        // Cria um espaçamento entre os elementos. Os espaçamentos do meio são duas vezes maiores que o inicial e final.
+    } @else if ($property == around) {
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+}
+
+// Align items.
+// O align-items alinha os flex itens de acordo com o eixo do container.
+// O alinhamento é diferente para quando os itens estão em colunas ou linhas.
+
+@mixin align__items($property: stretch) {
+    // Error console ide.
+    @if ($property != stretch and $property != start and $property != center and $property != end and $property != baseline) {
+        @error "A propriedade #{$property} é diferente dos valores aceitos (stretch / start / center / end / baseline).";
+    }
+
+        // Valor padrão, ele que faz com que os flex itens cresçam igualmente.
+    @if ($property == stretch) {
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+
+        // Alinha os itens ao início.
+    } @else if ($property == start) {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+
+        // Alinha os itens ao centro.
+    } @else if ($property == center) {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+
+        // Alinha os itens ao final.
+    } @else if ($property == end) {
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+
+        // Alinha os itens de acordo com a linha base da tipografia.
+    } @else if ($property == baseline) {
+        -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+        align-items: baseline;
+    }
+}
+
+// Align content.
+// Alinha as linhas do container em relação ao eixo vertical.
+// A propriedade só funciona se existir mais de uma linha de flex-itens. Para isso o flex-wrap precisa ser wrap.
+
+@mixin align__content($property: stretch) {
+    // Error console ide.
+    @if ($property != stretch and $property != start and $property != end and $property != center and $property != between and $property != around) {
+        @error "A propriedade #{$property} é diferente dos valores aceitos (stretch / start / end / center / between / around).";
+    }
+
+        // Valor padrão, ele que faz com que os flex itens cresçam igualmente na vertical.
+    @if ($property == stretch) {
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+
+        // Alinha todas as linhas de itens ao início.
+    } @else if ($property == start) {
+        -ms-flex-line-pack: start;
+        align-content: flex-start;
+
+        // Alinha todas as linhas de itens ao final.
+    } @else if ($property == end) {
+        -ms-flex-line-pack: end;
+        align-content: flex-end;
+
+        // Alinha todas as linhas de itens ao centro.
+    } @else if ($property == center) {
+        -ms-flex-line-pack: center;
+        align-content: center;
+
+        // Cria um espaçamento igual entre as linhas. Mantendo a primeira grudada no topo e a última no bottom.
+    } @else if ($property == between) {
+        -ms-flex-line-pack: justify;
+        align-content: space-between;
+
+        // Cria um espaçamento entre as linhas. Os espaçamentos do meio são duas vezes maiores que o top e bottom.
+    } @else if ($property == around) {
+        -ms-flex-line-pack: distribute;
+        align-content: space-around;
+    }
+}
+
+// Align self.
+// O align-self serve para definirmos o alinhamento específico de um único flex item dentro do nosso container.
+// Caso um valor seja atribuído, ele passara por cima do que for atribuído no align-items do container.
+
+@mixin align__self($property: auto) {
+    // Error console ide.
+    @if ($property != auto and $property != start and $property != end and $property != center and $property != baseline and $property != stretch) {
+        @error "A propriedade #{$property} é diferente dos valores aceitos (stretch / start / end / center / baseline / stretch).";
+    }
+
+    // Valor inicial padrão. Vai respeitar o que for definido pelo align-items no flex-container.
+    @if ($property == auto) {
+        -ms-flex-item-align: auto;
+        -ms-grid-row-align: auto;
+        align-self: auto;
+
+        // Alinha o item ao início.
+    } @else if ($property == start) {
+        -ms-flex-item-align: start;
+        align-self: flex-start;
+
+        // Alinha o item ao final.
+    } @else if ($property == end) {
+        -ms-flex-item-align: end;
+        align-self: flex-end;
+
+        // Alinha o item ao centro.
+    } @else if ($property == center) {
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+
+        // Alinha o item a linha de base.
+    } @else if ($property == baseline) {
+        -ms-flex-item-align: baseline;
+        align-self: baseline;
+
+        // Estica o item.
+    } @else if ($property == stretch) {
+        -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+    }
+}
+
+// Flex grow.
+// Define a habilidade de um flex item crescer.
+// Por padrão o valor é zero, assim os flex itens ocupam um tamanho máximo relacionado o conteúdo interno deles ou ao width definido.
+
+@mixin flex__grow($property: 0) {
+    -webkit-box-flex: $property;
+    -ms-flex-positive: $property;
+    flex-grow: $property;
+}
+
+// Flex basis.
+// Indica o tamanho inicial do flex item antes da distribuição do espaço restante.
+
+@mixin flex__basis($property: auto) {
+    -ms-flex-preferred-size: $property;
+    flex-basis: $property;
+}
+
+// Flex shrink.
+// Valor padrão, permite que os itens tenham os seus tamanhos (seja esse tamanho definido a partir de width ou flex-basis) reduzidos para caber no container.
+// Não permite a diminuição dos itens, assim um item com flex-basis: 18.75rem; nunca diminuirá menos do que 18.75rem, mesmo que o conteúdo não ocupe todo esse espaço.
+// Um item com shrink: 3 diminuirá 3 vezes mais que um item com 1.
+
+@mixin flex__shrink($property: 1) {
+    -ms-flex-negative: $property;
+    flex-shrink: $property;
+}
+
+// Flex.
+// Atalho para as propriedades flex-grow, flex-shrink e flex-basis.
+// Geralmente você verá a propriedade flex nos flex itens ao invés de cada um dos valores separados.
+
+@mixin flex__($property: 0 1 auto) {
+    -webkit-box-flex: $property;
+    -ms-flex: $property;
+    flex: $property;
+}
+
+// Order.
+// Modifica a ordem dos flex itens.
+// Sempre do menor para o maior, assim order: 1, aparece na frente de order: 5.
+
+@mixin order__($property: 0) {
+    -webkit-box-ordinal-group: $property;
+    -ms-flex-order: $property;
+    order: $property;
+}
+
+// Flex combo.
+// Combo do display, align e justify.
+// Usar quando precisar usar os 3 itens em um elemento.
+
+@mixin flex__combo($align: center, $justify: center) {
+    @include display__flex;
+    @include align__items($align);
+    @include justify__content($justify);
+}
+
+// GRID
+
+// Display grid.
+@mixin display__grid {
+    display: -ms-grid;
+    display: grid;
+}
+
+// Duas formas:
+// 1 / 13 - Inicia na linha ou coluna imaginaria 1 e termina na linha ou coluna imaginária 13.
+// 1 / span 12 - Inicia na linha ou coluna 1 e termina no final do elemento na linha ou coluna 12.
+// Ex: grid-colum: 1 / 13; === grid-colum: 1 / span 12;
+
+// Grid template.
+// Especifica o tamanho do grid, tamanho das colunas e linhas do grid template.
+// A contagem para posicionar elementos do grid é feita pelo inicio e fim das linhas e colunas e não pelas colunas e linhas em si.
+// Ex: Quando um grid possui 12 linhas e 12 colunas por exemplo, a contagem é para posicionar é 1 à 13.
+
+@mixin grid__template__row($value) {
+    -ms-grid-rows: $value;
+    grid-template-rows: $value; // Quantas linhas o grid vai possuir.
+}
+
+@mixin grid__template__columns($value) {
+    -ms-grid-columns: $value;
+    grid-template-columns: $value; // Quantas colunas o grid vai possuir - Ex: repeat(12, 1fr).
+}
+
+@mixin grid__template($value) {
+    -ms-grid-rows: $value;
+    -ms-grid-columns: $value;
+    grid-template: $value; // Quantas linhas / colunas o grid vai possuir - Ex: auto 1fr auto / auto 1fr auto.
+}
+
+// Grid column.
+// Especifica o tamanho e a localização do item em relação as colunas. 
+
+@mixin grid__column__start($value) {
+    -ms-grid-column: $value;
+    grid-column-start: $value; // Coluna de inicio do elemento
+}
+
+@mixin grid__column__end($value) {
+    -ms-grid-column-span: $value;
+    grid-column-end: $value; // Coluna de término do elemento
+}
+
+@mixin grid__column($value) {
+    -ms-grid-column: $value;
+    -ms-grid-column-span: $value;
+    grid-column: $value; // Coluna de início e término do elemento - Ex: 1 / 13
+}
+
+// Grid row.
+// Especifica o tamanho e a localização do item em relação as linhas.
+
+@mixin grid__row__start($value) {
+    -ms-grid-row: $value;
+    grid-row-start: $value; // Linha de inicio do elemento
+}
+
+@mixin grid__row__end($value) {
+    -ms-grid-row-span: $value;
+    grid-row-end: $value; // Linha de término do elemento
+}
+
+@mixin grid__row($value) {
+    -ms-grid-row: $value;
+    -ms-grid-row-span: $value;
+    grid-row: $value; // Linha de início e término do elemento
+}
+
+// Grid area.
+// Função 01 resumo do grid column (star e end) e grid row (star e end).
+// Função 02 nomear uma área.
+
+@mixin grid__area($name: "", $rs, $cs, $re, $ce) {
+    @if (unquote($name) != null) {
+        // Função 02 do grid-area.
+        grid-area: $name;
+
+    } @else {
+        // Ordem: row start / column start / row end / column end.
+        -ms-grid-row: $rs / $cs / $re / $ce;
+        -ms-grid-column: $rs / $cs / $re / $ce;
+        grid-area: $rs / $cs / $re / $ce;
+    }
+}
+
+// Grid template areas.
+// O grid-area na função de nomear os elementos é utilizada pelo grid-templete-areas.
+// usar um ponto no lugar do nome do elemento quando quer que o espaço seja vazio.
+
+// Ex: grid com duas colunas e duas linhas.
+// grid-template-areas: 
+//     "item01 item02"
+//     "item03 item04"
+// ;
+
+@mixin grid__template__areas() {
+}
+
+// Grid gap.
+
+@mixin grid__gap__column($value) {
+    -webkit-column-gap: $value;
+    -moz-column-gap: $value;
+    column-gap: $value; // Lacuna entre as colunas
+}
+
+@mixin grid__gap__row($value) {
+    row-gap: $value; // lacuna entre as linhas
+}
+
+@mixin grid__gap($value) {
+    gap: $value; // Lacuna entre linhas e colunas
+}
+
+// Place items.
+// Propriedade abreviada para align-items & justify-items
+// Se o segundo valor não for informado, o primeiro é utilizado para os dois.
+
+@mixin place__items($value) {
+    place-items: $value;
+}
+
+// repeat() - Evita repetir elementos, o primeiro parâmetro indica quantas vezes vai repetir e o segundo é o valor que se repetirá. Ex: repeat(12, 1fr);
+// repeat(auto-fit, minmax(9.375rem, 1fr);
+// auto-fit - conforme a tela aumenta, os itens aumentam para ocupar todo o espaço.
+// minmax - primeiro parâmetro "9.375rem" é o valor minimo e o segungo parâmetro "1fr" é o valor máximo.
+
+// OTHERS
+
+// Para @font-face.
+
+@mixin font__($family, $caminho, $style: normal, $display: auto, $stretch: normal, $synthesis: none, $kerning: auto, $variant: normal) {
+    font-family: $family;
+    src: $caminho;
+    // font-weight: $weight;
+    font-style: $style;
+    font-variant: $variant;
+    font-display: $display; // Determina como uma face de fonte é exibida com base em se e quando ela foi baixada e está pronta para uso.
+    font-stretch: $stretch; // Seleciona uma face normal, condensada ou expandida de uma fonte.
+    font-synthesis: $synthesis; // Controla quais fontes ausentes, negrito ou itálico, podem ser sintetizadas pelo navegador.
+    font-kerning: $kerning; // Informação de kerning, controle de como as letras serão espaçadas.
+}
+
+// Formatando fonts.
+
+@mixin font__format($weight: 400, $color, $lineH: normal, $letterS: normal, $textT: none, $textA: start) {
+    font-weight: $weight;
+    color: $color;
+    line-height: $lineH;
+    letter-spacing: $letterS;
+    text-transform: $textT;
+    text-align: $textA;
+}
+
+// Truncate.
+
+@mixin truncate__($orientation: horizontal, $value) {
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+
+    @if ($orientation == horizontal) {
+        max-width: $value;
+        white-space: nowrap;
+
+    } @else if ($orientation == vertical) {
+        display: -webkit-box;
+        -webkit-line-clamp: $value; // número de linhas que você quer exibir.
+        -webkit-box-orient: vertical;
+    }
+}
+
+// Placeholder.
+
+@mixin placeholder__ {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+// Backgorund para buttons.
+
+@mixin backgrounds__($bg) {
+    background: $bg;
+
+    &:hover, &:focus {
+        background: darken($bg, 8%);
+        // background: adjust-color($bg, $lightness: -8%);
+        // background: scale-color($bg, $lightness: -8%);
+        @include transition__($duration: 0.3s);
+    }
+
+    &:active, &:active:focus {
+        background: darken($bg, 25%);
+        // background: adjust-color($bg, $lightness: -25%);
+        // background: scale-color($bg, $lightness: -25%);
+    }
+}
+
+// Background opacity.
+
+@mixin backgrounds__opacity($color, $opacity: 0.3) {
+    background: $color; // Para browsers antigos.
+    background: rgba($color, $opacity);
+}
+
+// Background Gradient color.
+
+@mixin background__gradient($color, $color2) {
+    @include prefixes__(linear-gradient, $color, ('webkit', 'o'));
+
+    background: -webkit-gradient(linear, left top, right top, from($color), to($color2));
+    background: -o-linear-gradient(left, $color, $color2);
+    background: linear-gradient(90deg, $color, $color2);
+}
+
+// Background Gradient image e color.
+
+@mixin background__image($image, $gradient: none) {
+    background-image: $image, $gradient;
+}
+
+// Complementos do backgroud image geralmente.
+
+@mixin background__complement( $color, $size: cover, $origin: border-box, $clip: border-box, $position: center, $repeat: no-repeat, $attachment: scroll) {
+    background-color: $color;
+    background-size: $size;
+    background-repeat: $repeat;
+    background-clip: $clip;
+    background-position: $position; // A posição é relativa à posição do background-origin.
+    background-origin: $origin; // É ignorado se o background-attachment for fixed.
+    background-attachment: $attachment;
+}
+
+@mixin backdrop__($value) {
+    -webkit-backdrop-filter: blur($value);
+    backdrop-filter: blur($value);
+}
+
+// Shadow.
+
+@mixin shadow__($shadow, $type: box) {
+    -webkit-box-shadow: $shadow;
+    box-shadow: $shadow;
+
+    @if ($type == text) {
+        text-shadow: $shadow;
+    }
+}
+
+// Transitions.
+
+@mixin transition__($duration: 1s, $delay: 0s, $property: all, $function: ease) {
+    -webkit-transition: $duration $delay $property $function;
+    -o-transition: $duration $delay $property $function;
+    transition: $duration $delay $property $function;
+}
+
+// Animations.
+
+@mixin animate__($name, $duration, $timing, $delay: 0s, $iteration: 1, $direction: normal, $fill: none, $play: running) {
+    -webkit-animation-name: $name;
+    animation-name: $name;
+    -webkit-animation-duration: $duration;
+    animation-duration: $duration;
+    -webkit-animation-timing-function: $timing;
+    animation-timing-function: $timing;
+    -webkit-animation-delay: $delay;
+    animation-delay: $delay;
+    -webkit-animation-iteration-count: $iteration;
+    animation-iteration-count: $iteration;
+    -webkit-animation-direction: $direction;
+    animation-direction: $direction;
+    -webkit-animation-fill-mode: $fill;
+    animation-fill-mode: $fill;
+    -webkit-animation-play-state: $play;
+    animation-play-state: $play;
+}
+
+// Divider (HR).
+
+@mixin line__($align: center, $color, $width: 4.375rem, $height: 0.125rem, $marginT: 0.5rem, $marginB: 0.7rem, $borderR: 0) {
+    width: $width;
+    height: $height;
+    border-radius: $borderR;
+    background-color: $color;
+    
+    display: block;
+
+    // Alinhado ao centro.
+    @if ($align == center) {
+        margin: $marginT auto $marginB auto;
+
+        // ALinhado a esquerda.
+    } @else if ($align == left) {
+        margin: $marginT auto $marginB 0;
+
+        // Alinhado a direita.
+    } @else if($align == right) {
+        margin: $marginT 0 $marginB auto;
+    }
+}
+
+/// @param {String} $propriedade - Propriedade de CSS sem prefixo
+/// @param {*} $valor - valor de CSS crú
+/// @param {List} $prefixos - Lista de prefixos a serem expostos
+
+@mixin prefixes__($property, $value, $prefixes: ()) {
+    @each $prefix in $prefixes {
+      -#{$prefix}-#{$property}: $value;
+    }
+  
+    #{$property}: $value;
+}
+// @include prefixes__(transform, rotate(90deg), ('webkit', 'ms'));
+
+/* aspect-ratio: width / heihgt;
+    -> Para Imagens e Videos.
+    -> Exemplo: apect-ratio: 16 / 9
+    -> O video ou a imagem sempre vai manter essa proporção de tamanho independente da tela aumentar ou diminuir.
+    -> Não funciona em nenhum navegador estável ainda.
+*/
