@@ -11,7 +11,7 @@
     // Scroll bar do browser...
     // Firefox.
     scrollbar-width: auto; // values: auto, thin ou none.
-    scrollbar-color: #201F24 transparent;
+    scrollbar-color: $black transparent;
 
     // Chrome, Edge e Safari ...
     &::-webkit-scrollbar { // BAR...
@@ -19,7 +19,7 @@
     }
 
     &::-webkit-scrollbar-thumb { // BAR ALÇA...
-        background: #201F24;
+        background: $black;
     }
 
     &::-webkit-scrollbar-track { // BAR FUNDO...
@@ -32,11 +32,11 @@ html, body {
 }
 
 body {
-    background-color: #FFFFFF;
+    background-color: $white;
 
     // font-family: ;
     font-weight: 200;
-    color: #201F24;
+    color: $black;
     line-height: calc(1em + 0.8rem); // Altura variavél para a fonte...
     letter-spacing: 0.10rem;
     text-transform: none;
@@ -58,7 +58,7 @@ img, picture, video, canvas, svg {
 }
 
 a {
-    color: #201F24;
+    color: $black;
     text-decoration: none;
     outline: none;
 }
@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 
     // font-family: ;
     font-weight: 700;
-    color: #201F24;
+    color: $black;
     line-height: calc(1em + 1rem);
 }
 

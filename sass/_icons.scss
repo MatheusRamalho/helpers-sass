@@ -4,12 +4,12 @@
 
     width: 1.875rem;
     height: 1.875rem;
-    background-color: var(--black);
+    background-color: $black;
     background-repeat: no-repeat;
     transition: 200ms background-color ease;
 
     &:hover, &:focus {
-        color: var(--color);
+        color: $color;
     }
 
     // MAP
