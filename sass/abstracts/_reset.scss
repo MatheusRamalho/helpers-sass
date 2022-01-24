@@ -1,3 +1,6 @@
+@use './fonts' as font;
+@use './colors' as color;
+
 // CSS RESET...
 *, *::before, *::after {
     box-sizing: border-box;
@@ -11,7 +14,7 @@
     // Scroll bar do browser...
     // Firefox.
     scrollbar-width: auto; // values: auto, thin ou none.
-    scrollbar-color: $black transparent;
+    scrollbar-color: color.$blackLight transparent;
 
     // Chrome, Edge e Safari ...
     &::-webkit-scrollbar { // BAR...
@@ -19,11 +22,11 @@
     }
 
     &::-webkit-scrollbar-thumb { // BAR ALÇA...
-        background: $black;
+        background-color: color.$blackLight;
     }
 
     &::-webkit-scrollbar-track { // BAR FUNDO...
-        background: transparent;
+        background-color: transparent;
     }
 }
 
@@ -32,11 +35,11 @@ html, body {
 }
 
 body {
-    background-color: $white;
+    background-color: color.$white;
 
-    // font-family: ;
+    font-family: font.$fontFamily;
     font-weight: 200;
-    color: $black;
+    color: color.$blackLight;
     line-height: calc(1em + 0.8rem); // Altura variavél para a fonte...
     letter-spacing: 0.10rem;
     text-transform: none;
@@ -58,7 +61,7 @@ img, picture, video, canvas, svg {
 }
 
 a {
-    color: $black;
+    color: color.$blackLight;
     text-decoration: none;
     outline: none;
 }
@@ -71,9 +74,9 @@ h1, h2, h3, h4, h5, h6, p, span, small, address {
 h1, h2, h3, h4, h5, h6 {
     margin: 0 0 0.5rem 0;
 
-    // font-family: ;
+    font-family: font.$fontFamily;
     font-weight: 700;
-    color: $black;
+    color: color.$blackLight;
     line-height: calc(1em + 1rem);
 }
 
