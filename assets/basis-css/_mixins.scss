@@ -1,15 +1,28 @@
+/* --------------------------------------------------------------------------
+| MIXINS...
+|-------------------------------------------------------------------------- */
 
-// Display flex.
-// Torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens.
+/*
+|--------------------------------------------------------------------------
+| DISPLAY FLEX...
+|--------------------------------------------------------------------------
+| Torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens.
+*/
+
 @mixin displayFlex {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 }
 
-// Flex direction.
-// Define a direção dos flex itens.
-// Por padrão ele é row (linha), por isso quando o display: flex; é adicionado, os elementos ficam em linha, um do lado do outro.
+/*
+|--------------------------------------------------------------------------
+| FLEX DIREACTION...
+|--------------------------------------------------------------------------
+| Define a direção dos flex itens.
+| Por padrão ele é row (linha), por isso quando o display: flex; é adicionado, os elementos ficam em linha, um do lado do outro.
+*/
+
 @mixin flexDirection($property: row) {
     // Error console ide.
     @if ($property != row and $property != row-reverse and $property != column and $property != column-reverse) {
@@ -46,8 +59,13 @@
     }
 }
 
-// Flex wrap;
-// Define se os itens devem quebrar ou não a linha. Por padrão eles não quebram linha.
+/*
+|--------------------------------------------------------------------------
+| FLEX WRAP...
+|--------------------------------------------------------------------------
+| Define se os itens devem quebrar ou não a linha. Por padrão eles não quebram linha.
+*/
+
 @mixin flexWrap($property: nowrap) {
     // Error console ide.
     @if ($property != nowrap and $property != wrap and $property != wrap-reverse) {
@@ -71,8 +89,13 @@
     }
 }
 
-// Flex flow.
-// O flex-flow é um atalho para as propriedades flex-direction e flex-wrap.
+/*
+|--------------------------------------------------------------------------
+| FLEX FLOW...
+|--------------------------------------------------------------------------
+| O flex-flow é um atalho para as propriedades flex-direction e flex-wrap.
+*/
+
 @mixin flexFlow($property) {
     // Error console ide.
     @if ($property != row nowrap and $property != row wrap and $property != column nowrap) {
@@ -98,10 +121,15 @@
     }
 }
 
-// Justify content.
-// Alinha os itens flex no container de acordo com a direção.
-// A propriedade só funciona se os itens atuais não ocuparem todo o container.
-// Isso significa que ao definir flex: 1; ou algo similar nos itens, a propriedade não terá mais função.
+/*
+|--------------------------------------------------------------------------
+| JUSTIFY CONTENT...
+|--------------------------------------------------------------------------
+| Alinha os itens flex no container de acordo com a direção.
+| A propriedade só funciona se os itens atuais não ocuparem todo o container.
+| Isso significa que ao definir flex: 1; ou algo similar nos itens, a propriedade não terá mais função.
+*/
+
 @mixin justifyContent($property) {
     // Error console ide.
     @if ($property != start and $property != end and $property != center and $property != between and $property != around) {
@@ -139,9 +167,14 @@
     }
 }
 
-// Align items.
-// O align-items alinha os flex itens de acordo com o eixo do container.
-// O alinhamento é diferente para quando os itens estão em colunas ou linhas.
+/*
+|--------------------------------------------------------------------------
+| ALIGN ITEMS...
+|--------------------------------------------------------------------------
+| O align-items alinha os flex itens de acordo com o eixo do container.
+| O alinhamento é diferente para quando os itens estão em colunas ou linhas.
+*/
+
 @mixin alignItems($property: stretch) {
     // Error console ide.
     @if ($property != stretch and $property != start and $property != center and $property != end and $property != baseline) {
@@ -180,9 +213,14 @@
     }
 }
 
-// Align content.
-// Alinha as linhas do container em relação ao eixo vertical.
-// A propriedade só funciona se existir mais de uma linha de flex-itens. Para isso o flex-wrap precisa ser wrap.
+/*
+|--------------------------------------------------------------------------
+| ALIGN CONTENT...
+|--------------------------------------------------------------------------
+| Alinha as linhas do container em relação ao eixo vertical.
+| A propriedade só funciona se existir mais de uma linha de flex-itens. Para isso o flex-wrap precisa ser wrap.
+*/
+
 @mixin alignContent($property: stretch) {
     // Error console ide.
     @if ($property != stretch and $property != start and $property != end and $property != center and $property != between and $property != around) {
@@ -221,9 +259,14 @@
     }
 }
 
-// Align self.
-// O align-self serve para definirmos o alinhamento específico de um único flex item dentro do nosso container.
-// Caso um valor seja atribuído, ele passara por cima do que for atribuído no align-items do container.
+/*
+|--------------------------------------------------------------------------
+| ALIGN SELF...
+|--------------------------------------------------------------------------
+| O align-self serve para definirmos o alinhamento específico de um único flex item dentro do nosso container.
+| Caso um valor seja atribuído, ele passara por cima do que for atribuído no align-items do container.
+*/
+
 @mixin alignSelf($property: auto) {
     // Error console ide.
     @if ($property != auto and $property != start and $property != end and $property != center and $property != baseline and $property != stretch) {
@@ -265,59 +308,94 @@
     }
 }
 
-// Flex grow.
-// Define a habilidade de um flex item crescer.
-// Por padrão o valor é zero, assim os flex itens ocupam um tamanho máximo relacionado o conteúdo interno deles ou ao width definido.
+/*
+|--------------------------------------------------------------------------
+| FLEX GROW...
+|--------------------------------------------------------------------------
+| Define a habilidade de um flex item crescer.
+| Por padrão o valor é zero, assim os flex itens ocupam um tamanho máximo relacionado o conteúdo interno deles ou ao width definido.
+*/
+
 @mixin flexGrow($property: 0) {
     -webkit-box-flex: $property;
     -ms-flex-positive: $property;
     flex-grow: $property;
 }
 
-// Flex basis.
-// Indica o tamanho inicial do flex item antes da distribuição do espaço restante.
+/*
+|--------------------------------------------------------------------------
+| FELX BASIS...
+|--------------------------------------------------------------------------
+| Indica o tamanho inicial do flex item antes da distribuição do espaço restante.
+*/
+
 @mixin flexBasis($property: auto) {
     -ms-flex-preferred-size: $property;
     flex-basis: $property;
 }
 
-// Flex shrink.
-// Valor padrão, permite que os itens tenham os seus tamanhos (seja esse tamanho definido a partir de width ou flex-basis) reduzidos para caber no container.
-// Não permite a diminuição dos itens, assim um item com flex-basis: 18.75rem; nunca diminuirá menos do que 18.75rem, mesmo que o conteúdo não ocupe todo esse espaço.
-// Um item com shrink: 3 diminuirá 3 vezes mais que um item com 1.
+/*
+|--------------------------------------------------------------------------
+| FLEX SHRINK...
+|--------------------------------------------------------------------------
+| Valor padrão, permite que os itens tenham os seus tamanhos (seja esse tamanho definido a partir de width ou flex-basis) reduzidos para caber no container.
+| Não permite a diminuição dos itens, assim um item com flex-basis: 18.75rem; nunca diminuirá menos do que 18.75rem, mesmo que o conteúdo não ocupe todo esse espaço.
+| Um item com shrink: 3 diminuirá 3 vezes mais que um item com 1.
+*/
+
 @mixin flexShrink($property: 1) {
     -ms-flex-negative: $property;
     flex-shrink: $property;
 }
 
-// Flex.
-// Atalho para as propriedades flex-grow, flex-shrink e flex-basis.
-// Geralmente você verá a propriedade flex nos flex itens ao invés de cada um dos valores separados.
+/*
+|--------------------------------------------------------------------------
+| FLEX...
+|--------------------------------------------------------------------------
+| Atalho para as propriedades flex-grow, flex-shrink e flex-basis.
+| Geralmente você verá a propriedade flex nos flex itens ao invés de cada um dos valores separados.
+*/
+
 @mixin flex__($property: 0 1 auto) {
     -webkit-box-flex: $property;
     -ms-flex: $property;
     flex: $property;
 }
 
-// Order.
-// Modifica a ordem dos flex itens.
-// Sempre do menor para o maior, assim order: 1, aparece na frente de order: 5.
+/*
+|--------------------------------------------------------------------------
+| ORDER...
+|--------------------------------------------------------------------------
+| Modifica a ordem dos flex itens.
+| Sempre do menor para o maior, assim order: 1, aparece na frente de order: 5.
+*/
+
 @mixin order__($property: 0) {
     -webkit-box-ordinal-group: $property;
     -ms-flex-order: $property;
     order: $property;
 }
 
-// Flex combo.
-// Combo do display, align e justify.
-// Usar quando precisar usar os 3 itens em um elemento.
+/*
+|--------------------------------------------------------------------------
+| FLEX COMBO...
+|--------------------------------------------------------------------------
+| Combo do display, align e justify.
+| Usar quando precisar usar os 3 itens em um elemento.
+*/
+
 @mixin flexCombo($align: center, $justify: center) {
     @include display__flex;
     @include align__items($align);
     @include justify__content($justify);
 }
 
-// Display grid.
+/*
+|--------------------------------------------------------------------------
+| DISPLAY GRID...
+|--------------------------------------------------------------------------
+*/
+
 @mixin displayGrid {
     display: -ms-grid;
     display: grid;
@@ -328,65 +406,137 @@
 // 1 / span 12 - Inicia na linha ou coluna 1 e termina no final do elemento na linha ou coluna 12.
 // Ex: grid-colum: 1 / 13; === grid-colum: 1 / span 12;
 
-// Grid template.
-// Especifica o tamanho do grid, tamanho das colunas e linhas do grid template.
-// A contagem para posicionar elementos do grid é feita pelo inicio e fim das linhas e colunas e não pelas colunas e linhas em si.
-// Ex: Quando um grid possui 12 linhas e 12 colunas por exemplo, a contagem é para posicionar é 1 à 13.
+/*
+|--------------------------------------------------------------------------
+| GRID TEMPLATE...
+|--------------------------------------------------------------------------
+| Especifica o tamanho do grid, tamanho das colunas e linhas do grid template.
+| A contagem para posicionar elementos do grid é feita pelo inicio e fim das linhas e colunas e não pelas colunas e linhas em si.
+| Ex: Quando um grid possui 12 linhas e 12 colunas por exemplo, a contagem é para posicionar é 1 à 13.
+*/
+
+/*
+|--------------------------------------------------------------------------
+| GRID TEMPLATE ROW...
+|--------------------------------------------------------------------------
+| Quantas linhas o grid vai possuir.
+*/
+
 @mixin gridTemplateRow($value) {
     -ms-grid-rows: $value;
-    grid-template-rows: $value; // Quantas linhas o grid vai possuir.
+    grid-template-rows: $value;
 }
+
+/*
+|--------------------------------------------------------------------------
+| GRID TEMPLATE COLUMN...
+|--------------------------------------------------------------------------
+| Quantas colunas o grid vai possuir - Ex: repeat(12, 1fr).
+*/
 
 @mixin gridTemplateColumns($value) {
     -ms-grid-columns: $value;
-    grid-template-columns: $value; // Quantas colunas o grid vai possuir - Ex: repeat(12, 1fr).
+    grid-template-columns: $value;
 }
+
+/*
+|--------------------------------------------------------------------------
+| GRID TEMPLATE ROW E COLUMN...
+|--------------------------------------------------------------------------
+| Quantas linhas / colunas o grid vai possuir - Ex: auto 1fr auto / auto 1fr auto.
+*/
 
 @mixin gridTemplate($value) {
     -ms-grid-rows: $value;
     -ms-grid-columns: $value;
-    grid-template: $value; // Quantas linhas / colunas o grid vai possuir - Ex: auto 1fr auto / auto 1fr auto.
+    grid-template: $value;
 }
 
-// Grid column.
-// Especifica o tamanho e a localização do item em relação as colunas.
+/*
+|--------------------------------------------------------------------------
+| GRID COLUMN START...
+|--------------------------------------------------------------------------
+| Especifica o tamanho e a localização do item em relação as colunas.
+| Coluna de inicio do elemento
+*/
+
 @mixin gridColumnStart($value) {
     -ms-grid-column: $value;
-    grid-column-start: $value; // Coluna de inicio do elemento
+    grid-column-start: $value;
 }
+
+/*
+|--------------------------------------------------------------------------
+| GRID COLUMN END...
+|--------------------------------------------------------------------------
+| Coluna de término do elemento
+*/
 
 @mixin gridColumnEnd($value) {
     -ms-grid-column-span: $value;
-    grid-column-end: $value; // Coluna de término do elemento
+    grid-column-end: $value;
 }
+
+
+/*
+|--------------------------------------------------------------------------
+| GRID COLUMN...
+|--------------------------------------------------------------------------
+| Coluna de início e término do elemento - Ex: 1 / 13
+*/
 
 @mixin gridColumn($value) {
     -ms-grid-column: $value;
     -ms-grid-column-span: $value;
-    grid-column: $value; // Coluna de início e término do elemento - Ex: 1 / 13
+    grid-column: $value;
 }
 
-// Grid row.
-// Especifica o tamanho e a localização do item em relação as linhas.
+/*
+|--------------------------------------------------------------------------
+| GRID ROW START...
+|--------------------------------------------------------------------------
+| Especifica o tamanho e a localização do item em relação as linhas.
+| Linha de inicio do elemento
+*/
+
 @mixin gridRowStart($value) {
     -ms-grid-row: $value;
-    grid-row-start: $value; // Linha de inicio do elemento
+    grid-row-start: $value;
 }
+
+/*
+|--------------------------------------------------------------------------
+| GRID ROW END...
+|--------------------------------------------------------------------------
+| Linha de término do elemento
+*/
 
 @mixin gridRowEnd($value) {
     -ms-grid-row-span: $value;
-    grid-row-end: $value; // Linha de término do elemento
+    grid-row-end: $value;
 }
+
+/*
+|--------------------------------------------------------------------------
+| GRID ROW...
+|--------------------------------------------------------------------------
+| Linha de início e término do elemento
+*/
 
 @mixin gridRow($value) {
     -ms-grid-row: $value;
     -ms-grid-row-span: $value;
-    grid-row: $value; // Linha de início e término do elemento
+    grid-row: $value;
 }
 
-// Grid area.
-// Função 01 resumo do grid column (star e end) e grid row (star e end).
-// Função 02 nomear uma área.
+/*
+|--------------------------------------------------------------------------
+| GRID AREA...
+|--------------------------------------------------------------------------
+| Função 01 resumo do grid column (star e end) e grid row (star e end).
+| Função 02 nomear uma área.
+*/
+
 @mixin gridArea($name: "", $rs, $cs, $re, $ce) {
     @if (unquote($name) != null) {
         // Função 02 do grid-area.
@@ -400,36 +550,65 @@
     }
 }
 
-// Grid template areas.
-// O grid-area na função de nomear os elementos é utilizada pelo grid-templete-areas.
-// usar um ponto no lugar do nome do elemento quando quer que o espaço seja vazio.
+/*
+|--------------------------------------------------------------------------
+| GRID TEMPLATE AREAS...
+|--------------------------------------------------------------------------
+| O grid-area na função de nomear os elementos é utilizada pelo grid-templete-areas.
+| usar um ponto no lugar do nome do elemento quando quer que o espaço seja vazio.
+| Ex: grid com duas colunas e duas linhas.
+| grid-template-areas:
+|     "item01 item02"
+|     "item03 item04"
+| ;
+*/
 
-// Ex: grid com duas colunas e duas linhas.
-// grid-template-areas:
-//     "item01 item02"
-//     "item03 item04"
-// ;
 @mixin gridTemplateAreas() {
 }
 
-// Grid gap.
+/*
+|--------------------------------------------------------------------------
+| GRID GAP COLUMN...
+|--------------------------------------------------------------------------
+| Lacuna entre as colunas
+*/
+
 @mixin gridGapColumn($value) {
     -webkit-column-gap: $value;
     -moz-column-gap: $value;
-    column-gap: $value; // Lacuna entre as colunas
+    column-gap: $value;
 }
+
+/*
+|--------------------------------------------------------------------------
+| GRID GAO ROW...
+|--------------------------------------------------------------------------
+| lacuna entre as linhas
+*/
 
 @mixin gridGapRow($value) {
-    row-gap: $value; // lacuna entre as linhas
+    row-gap: $value;
 }
+
+/*
+|--------------------------------------------------------------------------
+| GRID GAP...
+|--------------------------------------------------------------------------
+| Lacuna entre linhas e colunas
+*/
 
 @mixin gridGap($value) {
-    gap: $value; // Lacuna entre linhas e colunas
+    gap: $value;
 }
 
-// Place items.
-// Propriedade abreviada para align-items & justify-items
-// Se o segundo valor não for informado, o primeiro é utilizado para os dois.
+/*
+|--------------------------------------------------------------------------
+| PLACE ITEMS...
+|--------------------------------------------------------------------------
+| Propriedade abreviada para align-items & justify-items
+| Se o segundo valor não for informado, o primeiro é utilizado para os dois.
+*/
+
 @mixin placeItems($value) {
     place-items: $value;
 }
@@ -612,6 +791,7 @@
 
     #{$property}: $value;
 }
+
 // @include prefixes__(transform, rotate(90deg), ('webkit', 'ms'));
 
 /* aspect-ratio: width / heihgt;
