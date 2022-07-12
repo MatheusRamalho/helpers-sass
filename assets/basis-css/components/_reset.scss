@@ -1,7 +1,7 @@
-@use './fonts' as font;
-@use './colors' as color;
+/* --------------------------------------------------------------------------
+| RESET...
+|-------------------------------------------------------------------------- */
 
-// CSS RESET...
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -10,11 +10,15 @@
     outline: none;
 }
 
+/* --------------------------------------------------------------------------
+| SCROLL...
+|-------------------------------------------------------------------------- */
+
 * {
     // Scroll bar do browser...
     // Firefox.
     scrollbar-width: auto; // values: auto, thin ou none.
-    scrollbar-color: color.$blackLight transparent;
+    scrollbar-color: #222124 transparent;
 
     // Chrome, Edge e Safari ...
     &::-webkit-scrollbar { // BAR...
@@ -22,7 +26,7 @@
     }
 
     &::-webkit-scrollbar-thumb { // BAR ALÇA...
-        background-color: color.$blackLight;
+        background-color: #222124;
     }
 
     &::-webkit-scrollbar-track { // BAR FUNDO...
@@ -30,14 +34,18 @@
     }
 }
 
+/* --------------------------------------------------------------------------
+| ELEMENTS...
+|-------------------------------------------------------------------------- */
+
 body {
     width: 100%;
     height: 100%;
-    background-color: color.$white;
+    background-color: #FFFFFF;
 
-    font-family: font.$fontFamily;
+    // font-family: ;
     font-weight: 300;
-    color: color.$blackLight;
+    color: #222124;
     line-height: calc(1em + 0.8rem); // Altura variavél para a fonte...
     letter-spacing: 0.10rem;
     text-transform: none;
@@ -53,13 +61,12 @@ input, button, textarea, select {
 }
 
 img, picture, video, canvas, svg {
-    max-width: 100%;
-
     display: block;
+    max-width: 100%;
 }
 
 a {
-    color: color.$blackLight;
+    color: #222124;
     text-decoration: none;
     outline: none;
 }
@@ -72,9 +79,9 @@ h1, h2, h3, h4, h5, h6, p, span, small, address {
 h1, h2, h3, h4, h5, h6 {
     margin: 0 0 0.5rem 0;
 
-    font-family: font.$fontFamily;
+    // font-family: ;
     font-weight: 700;
-    color: color.$blackLight;
+    color: #222124;
     line-height: calc(1em + 1rem);
 }
 
@@ -105,6 +112,10 @@ h5 {
 h6 {
     font-size: 1rem;
 }
+
+/* --------------------------------------------------------------------------
+| MEDIAS QUERIES...
+|-------------------------------------------------------------------------- */
 
 @media (min-width: 1200px) {
     h1 {

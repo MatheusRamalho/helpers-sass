@@ -1,37 +1,40 @@
 /* --------------------------------------------------------------------------
 | CONTAINERS...
 |-------------------------------------------------------------------------- */
+
+@use '../abstracts/breakpoints' as break;
+
 .container, .container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
     width: 100%;
     margin: 0 auto;
     padding: 0 0.938rem;
 }
 
-@media (min-width: 576px) {
+@media (min-width: break.$break-3sm) {
     .container-sm, .container {
         max-width: 33.75rem; // 540px
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: break.$break-3md) {
     .container-md, .container-sm, .container {
         max-width: 45rem; // 720px
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: break.$break-lg) {
     .container-lg, .container-md, .container-sm, .container {
         max-width: 60rem; // 960px
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: break.$break-xl) {
     .container-xl, .container-lg, .container-md, .container-sm, .container {
         max-width: 71.25rem; // 1140px
     }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: break.$break-2hd) {
     .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
         max-width: 82.5rem; // 1320px
     }
